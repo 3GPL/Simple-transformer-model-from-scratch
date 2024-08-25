@@ -56,7 +56,7 @@ def decoder(x, enc_output, d_ff):
     x = x + self_attn_output
     x = layer_norm(x)
     
-    cross_attn_output = SelfAttention(x)  # In practice, should use enc_output, simplified here
+    cross_attn_output = SelfAttention(x)
     x = x + cross_attn_output
     x = layer_norm(x)
     
